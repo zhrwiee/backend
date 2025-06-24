@@ -16,6 +16,8 @@ connectCloudinary()
 // middlewares
 app.use(express.json())
 app.use(cors())
+app.use(cors({ origin: ['https://hpapadmins.netlify.app', 'https://hpap.netlify.app'] }));
+
 
 // api endpoints
 app.use("/api/user", userRouter)
