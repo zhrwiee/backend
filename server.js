@@ -26,4 +26,6 @@ app.get("/", (req, res) => {
   res.send("API Working")
 });
 
-app.listen(port, () => console.log(`Server started on PORT:${port}`))
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server is running on http://0.0.0.0:${PORT}`);
+});
