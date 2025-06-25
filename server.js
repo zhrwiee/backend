@@ -15,9 +15,7 @@ connectCloudinary()
 
 // middlewares
 app.use(express.json())
-app.use(cors())
-app.use(cors({ origin: ['https://hpapadmins.netlify.app', 'https://hpap.netlify.app'] }));
-
+app.use(cors({ origin: ['https://hpapadmins.netlify.app', 'https://hpap.netlify.app'] }))
 
 // api endpoints
 app.use("/api/user", userRouter)
@@ -26,8 +24,8 @@ app.use("/api/doctor", doctorRouter)
 
 app.get("/", (req, res) => {
   res.send("API Working")
-});
+})
 
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server is running on http://0.0.0.0:${PORT}`);
-});
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server is running on http://0.0.0.0:${port}`)
+})
